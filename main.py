@@ -88,6 +88,7 @@ async def give_gift(call: types.CallbackQuery):
 @dp.callback_query_handler(state="*", text='pic')
 async def wanna_pic(call: CallbackQuery):
     await call.message.answer('Хочешь забрать тренировку в формате картинки?', reply_markup=kb_photo)
+    await call.answer()
 
 
 @dp.message_handler(state= "*", text='Да, хочу!')
