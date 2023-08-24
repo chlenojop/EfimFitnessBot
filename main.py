@@ -50,7 +50,7 @@ kb_yess = types.InlineKeyboardMarkup(resize_keyboard=True).add(b_yess)
 b_photo = KeyboardButton(text='Да, хочу!')
 kb_photo = ReplyKeyboardMarkup(resize_keyboard=True).add(b_photo)
 
-b_anket = types.InlineKeyboardButton(text='Жми, чтоб заполнить анкету!', url='https://forms.gle/H6ooBr4RgY8cizyt5')
+b_anket = types.InlineKeyboardButton(text='Жми, чтобы заполнить анкету!', url='https://docs.google.com/forms/d/1_ZbfiQcoSsvMiiyFCM1koK86-ee6djDIz1kxpcDP3eM/edit')
 kb_anket = types.InlineKeyboardMarkup(resize_keyboard=True).add(b_anket)
 
 
@@ -107,7 +107,7 @@ async def photo(message: types.Message):
                               f"2. О секретах построения тренировочного процесса и плана питания.\n"
                               f"3. О том, как нам с клиентами удается приходить к результатам в кратчайшие сроки. ",
                               parse_mode="Markdown")
-    await message.answer(f"Для записи заполняй анкету!", reply_markup=kb_anket)
+    await message.answer(f"Для записи заполняй анкету 👇🏻", reply_markup=kb_anket)
 
 
 
